@@ -3,5 +3,4 @@
 *.iso
 iso/
 kernel.bin
-run
-#*#
+test
