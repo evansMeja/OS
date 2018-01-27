@@ -16,4 +16,9 @@
 #
 #"...Knowing and not doing is ultimately not knowing..."
 #
+=====================================
+Ver 0.0.1
+#kernel.bin has been created, by now it does not do anything yet except displaying "hello"
+#
+#make  kernel.bin
 #
