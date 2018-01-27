@@ -1,7 +1,7 @@
-#hex magic number 0x1BADB002 is necessary for GRUB to know it is a kernel
-.set MAGIC, 0x1BADB002
-.set FLAGS, (1<<0 | 1<<3)
-.set CHECKSUM, -(0x1BADB002+FLAGS)
+#hex magic number 0x1badb002 is necessary for GRUB to know it is a kernel
+.set MAGIC, 0x1badb002
+.set FLAGS, (1<<0 | 1<<1)
+.set CHECKSUM, -(MAGIC+FLAGS)
 
 .section .multiboot #this section only loads the variables
 	.long MAGIC
