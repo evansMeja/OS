@@ -9,10 +9,19 @@ void printf(char* str)
   
  }
 
-//@params accepting values on top of stack
+typedef void (*constructor)();
+extern "C" constructor start_ctors;
+extern "C" constructor end_ctors;
+extern "C" void callConstructors()
+{
+	for( constructor* i = &start_ctors ; i != &end_ctors ; i++ )
+	(*i)();
+}
+
+//params accepting values on top of stack
 //extern "C" makes function available for linker
 extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber)
 {
-  printf("Hello");
+  printf("We are now in kernel main");
   while(1);
 }

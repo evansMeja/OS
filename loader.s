@@ -10,7 +10,7 @@
 	
 .section .text
 .extern kernelMain
-
+.extern callConstructors
 .global loader
 
 loader:
@@ -18,6 +18,8 @@ loader:
 	#at this point GRUB has
 	#pushed pointer for multiboot info into eax
 	#pushed MAGIC number into ebx
+	call callConstructors
+	
 	push %eax
 	push %ebx
 	#now we have such pointers on top of stack before calling kernel
