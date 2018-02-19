@@ -1,5 +1,5 @@
-#ifndef _TYPES_H
-#define _TYPES_H
+#ifndef __TYPES_H
+#define __TYPES_H
 
 	//declaring types to provide standard type sizes
 	typedef char int8_t;

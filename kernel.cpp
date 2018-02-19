@@ -1,4 +1,6 @@
 #include "types.h"
+#include "gdt.h"
+
 //main kernel function
 void printf(char* str)
 {
