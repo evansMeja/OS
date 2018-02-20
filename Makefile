@@ -25,3 +25,4 @@ kernel.bin: linker.ld $(objects)
 	echo '    boot}' >> iso/boot/grub/grub.cfg
 	grub-mkrescue --output=$@ iso
 	rm -rf iso
+	rm *.o
