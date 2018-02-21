@@ -17,7 +17,7 @@
 		Port8Bit(uint16_t portnumber);
 		~Port8Bit();
 		virtual void Write(uint8_t data);
-		virtual uint8_t Read(uint8_t portnumber);
+		virtual uint8_t Read(uint16_t portnumber);
 	};
 
 	class Port8BitSlow : public Port8Bit
