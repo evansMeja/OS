@@ -30,3 +30,9 @@ Ver 0.0.1
 #make [image].iso
 #
 #make will cleanup temporary files after creating iso file
+=========
+I just downloaded port.h and port.cpp from github repo due to 2 main problems
+1.File in repo is quite different to the one on video
+2.I did try to make the one on video work but kept having errors at compilation due to assembler junk, will try to solve it trough stack overflow
+
+I will keep my versions as portb inside the project hoping i can actually make it work to understand what happened, I've been trying to troubleshoot it myself but no luck, the main problem so far is that i don't really understand what the constraints in asm command do.

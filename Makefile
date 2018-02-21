@@ -2,7 +2,7 @@ GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-leadi
 ASPARAMS = --32
 LDPARAMS = -melf_i386
 
-objects = loader.o kernel.o gdt.o
+objects = loader.o kernel.o gdt.o port.o
 
 %.o: %.cpp
 	g++ $(GPPPARAMS) -o $@ -c $<
@@ -26,3 +26,4 @@ kernel.bin: linker.ld $(objects)
 	grub-mkrescue --output=$@ iso
 	rm -rf iso
 	rm *.o
+	rm *~
